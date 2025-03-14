@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+       
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        article {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .date {
+            font-size: 0.8rem;
+            color: gray;
+        }
+        .post-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label, form input, form textarea, form button {
+            margin-bottom: 10px;
+        }
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #555;
+        }
+       
+        @media (max-width: 768px) {
+            main {
+                padding: 10px;
+            }
+           
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sesion 4 blog</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Sesion 4 blog</h1>
+       
+    </header>
+    <main>
+        <section id="posts">
+            <article>
+                <h2>Sesion 4 blog</h2>
+                <p class="date">Sesion 2</p>
+                <img src="https://img.freepik.com/foto-gratis/codificacion-programas-informaticos-pantalla_53876-138060.jpg" alt="Imagen de publicación" class="post-image">
+                <p>Herramientas y Métodos de Ingeniería del Software</p>
+                <a href="#">Leer más</a><br><br>
+                <button class="delete-post">Eliminar Post</button>
+            </article>
+        </section>
+        
+        <section id="new-post">
+            <h2>Agregar una nueva publicación</h2>
+            <form id="post-form">
+                <label for="title">Título:</label>
+                <input type="text" id="title" required>
+                <label for="content">Contenido:</label>
+                <textarea id="content" required></textarea>
+                <label for="image">Imagen:</label>
+                <input type="file" id="image" accept="image/*">
+                <button type="button" id="add-post">Agregar Publicación</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        document.getElementById("add-post").addEventListener("click", function() {
+            let title = document.getElementById("title").value;
+            let content = document.getElementById("content").value;
+            let imageInput = document.getElementById("image");
+            let imageFile = imageInput.files[0];
+            
+            if (title && content && imageFile) {
+                let newPost = document.createElement("article");
+                let imageUrl = URL.createObjectURL(imageFile);
+                
+                newPost.innerHTML = `<h2>${title}</h2>
+                                    <p class="date">Publicado el ${new Date().toLocaleDateString()}</p>
+                                    <img src="${imageUrl}" alt="Imagen de publicación" class="post-image">
+                                    <p>${content}</p>
+                                    <a href="#">Leer más</a><br><br>
+                                    <button class="delete-post">Eliminar Post</button>`;
+                document.getElementById("posts").appendChild(newPost);
+                
+                newPost.querySelector(".delete-post").addEventListener("click", function() {
+                    newPost.remove();
+                });
+                
+                document.getElementById("post-form").reset();
+            } else {
+                alert("Por favor, completa todos los campos y sube una imagen.");
+            }
+        });
+
+        document.getElementById("posts").addEventListener("click", function(event) {
+            if (event.target.classList.contains("delete-post")) {
+                event.target.parentElement.remove();
+            }
+        });
+    </script>
+    
+</body>
+</html>
+
