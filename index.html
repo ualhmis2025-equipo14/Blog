@@ -4,43 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sesión 4 Blog</title>
-    <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Sesión 4 Blog</h1>
+        <h1>Blog Equipo 14</h1>
     </header>
     <main>
-        <section id="posts">
-            <article>
-                <h2>Sesión 4 Blog</h2>
-                <p class="date">Sesión 2</p>
-                <img src="assets/CodeImage.avif" alt="Imagen de publicación" class="post-image">
-                <p>Herramientas y Métodos de Ingeniería del Software</p>
-                <a href="#">Leer más</a><br><br>
-                <button class="delete-post">Eliminar Post</button>
-            </article>
+        <p> Somos Alejandro Ortega Ramon y Alex Gutierrez Quiles. Nuestro objetivo con este blog es poner en practica nuestras habilidades para desplegar un sitio web en distintas plataformas. Esperamos sea de vuestro agrado</p>
+        <img src="assets/CodeImage.avif" alt="Imagen" class="post-image">
+        <section>
+            <h2>Ultimas entradas del blog</h2>
+            <table>
+                <li>Primera entrada</li>
+                <li>Segunda entrada</li>
+            </table>
         </section>
-        
-        <section id="new-post">
-            <h2>Agregar una nueva publicación</h2>
-            <form id="post-form">
-                <label for="title">Título:</label>
-                <input type="text" id="title" required>
-                
-                <label for="content">Contenido:</label>
-                <textarea id="content" required></textarea>
-                
-                <label for="image">Imagen:</label>
-                <input type="file" id="image" accept="image/*">
-                
-                <button type="button" id="add-post">Agregar Publicación</button>
-            </form>
+            <h2>Nuestras paginas personales</h2>
+                <li><a href="pages/aor.html">Pagina de Alejandro Ortega</a></li>
+                <li><a href="">Pagina de Alex Gutierrez</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Pagina de contacto</h2>
+            <li><a href="">Contactanos</a></li>
         </section>
     </main>
-
-    <!-- Enlace al archivo JavaScript -->
-    <script src="../scripts/script.js"></script>
 </body>
 </html>
