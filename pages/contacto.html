@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="aor.html">Pagina de Alejandro</a>
+                <a href="">Pagina de Alex</a>
+                <a href="../index.html">Inicio</a>
+                <a href="">Articulos</a>
+                <a href="">Contactanos</a>
+            </ul>
+        </nav>
+    </header>
+    <main class="contacto">
+  <h1>Contáctame</h1>
+  <p>Por favor, completa este formulario si deseas ponerte en contacto.</p>
+  
+  <form action="https://formspree.io/f/xpwpqdzv" method="POST">
+    <p>
+    <!-- Nombre -->
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required />
+    </p>
+    <p>
+    <!-- Correo Electrónico -->
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required />
+    </p>
+    <p>
+    <!-- Mensaje -->
+    <label for="message">Mensaje:</label>
+    <p>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    </p>
+    </p>
+    <!-- Botón de Envío -->
+    <button type="submit">Enviar</button>
+  </form>
+  </main>
+  <footer>
+    <p>&copy;Blog HMIS 2025. Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
