@@ -5,32 +5,36 @@ body {
     background-color: #f4f4f4;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     background: #333;
     color: white;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 110px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+nav ul a {
+    color: white;
 }
 
 main {
     padding: 20px;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-article {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.date {
-    font-size: 0.8rem;
-    color: gray;
 }
 
 .post-image {
@@ -41,39 +45,10 @@ article {
     margin-bottom: 10px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label,
-form input,
-form textarea,
-form button {
-    margin-bottom: 10px;
-}
-
-form input,
-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    background: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #555;
-}
-
-@media (max-width: 768px) {
-    main {
-        padding: 10px;
-    }
-}
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    margin-top: 0;
+  }
