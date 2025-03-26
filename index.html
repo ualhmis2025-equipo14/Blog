@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sesión 4 Blog</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sesión 4 Blog</title>
+  <!-- Vincula tu CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<header>
-    <nav>
-        <ul>
-            <a href="pages/aor.html">Pagina de Alejandro</a>
-            <a href="">Pagina de Alex</a>
-            <a href="index.html">Inicio</a>
-            <a href="pages/articulos.html">Articulos</a>
-            <a href="pages/contacto.html">Contactanos</a>
-        </ul>
-    </nav>
-</header>
 <body>
-    <main>
-        <p>
-            Somos Alejandro Ortega Ramón y Alex Gutiérrez Quiles. A través de este blog buscamos perfeccionar nuestras habilidades en el despliegue de sitios web en distintas
-            plataformas. En nuestros caso todo el blog es hecho a mano, sin usar herraminetas como Jekyll o Hugo. Esperamos que sea de vuestro agrado.
-        </p>
-        <img src="assets/CodeImage.avif" alt="Imagen" class="post-image">
-    </main>
-</body>
+
+<header>  
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  
+  <nav>
+    <ul id="nav-list">
+      <li><a href="pages/aor.html">Página de Alejandro</a></li>
+      <li><a href="#">Página de Alex</a></li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="pages/articulos.html">Artículos</a></li>
+      <li><a href="pages/contacto.html">Contáctanos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p>
+    Somos Alejandro Ortega Ramón y Alex Gutiérrez Quiles. A través de este blog buscamos perfeccionar nuestras habilidades 
+    en el despliegue de sitios web en distintas plataformas. En nuestro caso, todo el blog está hecho a mano, sin usar 
+    herramientas como Jekyll o Hugo. ¡Esperamos que sea de vuestro agrado!
+  </p>
+  <img src="assets/CodeImage.avif" alt="Imagen" class="post-image">
+</main>
+
 <footer>
-    <p>&copy;Blog HMIS 2025. Todos los derechos reservados</p>
+  <p>&copy;Blog HMIS 2025. Todos los derechos reservados</p>
 </footer>
+</body>
+<script src="scripts/menu.js"></script>
 </html>
