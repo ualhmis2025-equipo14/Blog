@@ -6,18 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../styles.css">
 </head>
-<header>
-  <nav>
-      <ul>
-          <a href="aor.html">Pagina de Alejandro</a>
-          <a href="">Pagina de Alex</a>
-          <a href="../index.html">Inicio</a>
-          <a href="articulos.html">Articulos</a>
-          <a href="contacto.html">Contactanos</a>
-      </ul>
-  </nav>
-</header>
 <body>
+  <header>  
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    
+    <nav>
+      <ul id="nav-list">
+        <li><a href="aor.html">Página de Alejandro</a></li>
+        <li><a href="#">Página de Alex</a></li>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="articulos.html">Artículos</a></li>
+        <li><a href="contacto.html">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
     <main class="contacto">
   <h1>Contactanos</h1>
   <p>Por favor, completa este formulario si deseas ponerte en contacto.</p>
@@ -44,9 +46,9 @@
     <button type="submit">Enviar</button>
   </form>
   </main>
+  <footer>
+    <p>&copy;Blog HMIS 2025. Todos los derechos reservados</p>
+  </footer>
 </body>
-<footer>
-  <p>&copy;Blog HMIS 2025. Todos los derechos reservados</p>
-</footer>
 <script src="../scripts/menu.js"></script>
 </html>
