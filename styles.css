@@ -1,23 +1,19 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
 
-/* Quita el subrayado de los enlaces */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Estilos del header */
 header {
   position: fixed;
   top: 0;
@@ -26,29 +22,22 @@ header {
   height: 80px;
   background: #333;
   color: white;
-  display: flex;          /* Para alinear logo, hamburguesa y nav */
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 2rem;
-  z-index: 999;           /* Asegura que el header se coloque por encima de todo */
+  z-index: 999;
 }
 
-/* Logo o título opcional */
 .logo {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-/* Botón hamburguesa */
 .hamburger {
-  display: none;          /* Se oculta en pantallas grandes por defecto */
+  display: none;
   font-size: 1.8rem;
   cursor: pointer;
-}
-
-/* Navegación */
-nav {
-  /* No sobrescribas estilos esenciales; se controla principalmente en media queries */
 }
 
 nav ul {
@@ -64,10 +53,9 @@ nav ul li a {
   color: white;
 }
 
-/* Main */
 main {
   margin-top: 80px;
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 20px;
   max-width: 900px;
   margin-left: auto;
@@ -76,7 +64,18 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Imagen principal */
+main h1 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+main p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
 .post-image {
   width: 100%;
   max-height: 400px;
@@ -85,7 +84,6 @@ main {
   margin-bottom: 10px;
 }
 
-/* Footer */
 footer {
   position: fixed;
   bottom: 0;
@@ -98,7 +96,6 @@ footer {
   padding: 2rem;
 }
 
-/* Otras secciones */
 .contacto {
   width: 900px;
 }
@@ -132,65 +129,51 @@ footer {
   color: #555;
 }
 
-/* 
-    ================
-    MEDIA QUERIES
-    ================
-*/
 @media (max-width: 768px) {
-  /* Ajustar altura del header */
   header {
     height: 60px;
     padding: 0 1rem;
   }
 
-  /* Mostrar el botón hamburguesa en móviles */
   .hamburger {
     display: block;
   }
 
-  /* Ocultar menú de navegación por defecto en móviles */
   nav ul {
-    position: absolute;        /* Para que puedas desplegarlo sobre el contenido */
-    top: 60px;                 /* Debe coincidir con la altura del header en móviles */
+    position: absolute;
+    top: 60px;
     left: 0;
     width: 100%;
     flex-direction: column;
-    gap: 0;                    /* Espacio entre items */
+    gap: 0;
     background: #333;
-    display: none;            /* Oculto por defecto */
+    display: none;
   }
 
-  /* Clase que se activa al dar click en el icono hamburguesa */
   nav ul.show {
     display: flex;
   }
 
-  /* Ajustes de estilo para los links dentro del menú */
   nav ul li {
     text-align: center;
     margin: 10px 0;
   }
 
-  /* Main */
   main {
     margin-top: 60px;
     padding: 15px;
     max-width: 90%;
   }
 
-  /* Footer */
   footer {
     height: 60px;
     padding: 1rem;
   }
 
-  /* Contacto */
   .contacto {
     width: 100%;
   }
 
-  /* Artículos */
   .articulo {
     max-width: 90%;
     margin: 15px auto;
