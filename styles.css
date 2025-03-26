@@ -1,6 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
@@ -10,6 +15,11 @@ a {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
     background: #333;
     color: white;
     padding: 2rem;
@@ -30,9 +40,12 @@ nav ul a {
 }
 
 main {
+    margin-top: 80px;
+    min-height: 100vh;
     padding: 20px;
     max-width: 900px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -46,6 +59,11 @@ main {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
     text-align: center;
     background-color: #333;
     color: #fff;
@@ -56,3 +74,33 @@ footer {
   .contacto {
     width: 900px;
   }
+
+  .articulo {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .articulo h1 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .articulo img {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+  }
+  
+  .articulo p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
