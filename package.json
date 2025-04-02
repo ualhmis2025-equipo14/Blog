@@ -1,0 +1,11 @@
+{
+    "name": "mi-app-estatica",
+    "version": "1.0.0",
+    "description": "Aplicación web estática con HTML, CSS y JS puro",
+    "scripts": {
+      "build": "echo 'Nada que construir para una app estática pura'"
+    },
+    "author": "",
+    "license": "MIT"
+  }
+  
